@@ -1,7 +1,7 @@
 # Text_Editor
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
+x// TODO: Add and configure workbox plugins for a service worker and manifest file.
+x// TODO: Add CSS loaders and babel to webpack.
 // TODO: Implement asset caching
 // TODO: Add logic to a method that accepts some content and adds it to the database
 // TODO: Add logic for a method that gets all the content from the database
