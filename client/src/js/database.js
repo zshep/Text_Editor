@@ -25,7 +25,7 @@ export const putDb = async (content) => {
 
     // confirmation of the request.
     const result = await request;
-    console.log(`The result type is:${typeof(result)}`);
+    //console.log(`The result type is:${typeof(result)}`);
     console.log('🚀 - data saved to the database', result);
     return result.values;
 
