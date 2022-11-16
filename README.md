@@ -11,6 +11,6 @@ x// TODO: Add logic to a method that accepts some content and adds it to the dat
 x// TODO: Add logic for a method that gets all the content from the database
 
         ----- clinet/src/js/install.js
-// TODO: Add an event handler to the `beforeinstallprompt` event
-// TODO: Implement a click event handler on the `butInstall` element
-// TODO: Add an handler for the `appinstalled` event
+x// TODO: Add an event handler to the `beforeinstallprompt` event
+x// TODO: Implement a click event handler on the `butInstall` element
+x// TODO: Add an handler for the `appinstalled` event

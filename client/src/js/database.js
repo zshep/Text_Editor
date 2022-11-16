@@ -12,9 +12,10 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
+// logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
    try{
+    console.log('PutDb has started');
     const jatetDb = await openDB('jate', 1);
     // create new transaction 
     const tx = jatetDb.transaction('jate', 'readwrite');
@@ -24,17 +25,15 @@ export const putDb = async (content) => {
 
     // confirmation of the request.
     const result = await request;
+    console.log(`The result type is:${typeof(result)}`);
     console.log('🚀 - data saved to the database', result);
+    return result.values;
 
    }catch {
      console.error('putDb not implemented');}
-
-
    }
 
-   
-  
-  
+
 
 
  // Export a function we will use to GET to the database.
@@ -45,21 +44,19 @@ export const putDb = async (content) => {
     const tx = jatetDb.transaction('jate', 'readonly');
       // open up the object
     const store = tx.objectStore('jate');
-      //grab all the data
-    const request = store.getAll();
+      //grab the first element in said object
+    const request = store.get(1);
     
      // Get confirmation of the request.
   const result = await request;
-  console.log('result.value', result);
-  return result;
+  console.log('result.value', result.value);
+  return result.value;
 
     } catch {  
       console.error('getDb not implemented');
     }
 } 
   
-
-
 
 //start the database
 initdb();

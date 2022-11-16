@@ -26,12 +26,14 @@ module.exports = () => {
         swDest: 'src-sw.js',
       }), 
       new WebpackPwaManifest({
+        fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Read the name',
         background_color: '#ffffff',
-        crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+        start_url: './',
+        publicPath: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
